@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://192.168.178.21:5500/projects/FullStack/signup-form/signup-form.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="./Sign-Up Form_files/signup-form.css">
+    <script src="./Sign-Up Form_files/sign-up-form.js" defer=""></script>
+</head><body cz-shortcut-listen="true">
+    <div class="hero-wrapper">
+        <div class="hero-image">
+            <h1>FREE One way ticket to hell and back!</h1>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="header">
+            <p>Sign up for a FREE one way ticket to hell and back! Enjoy the journey to meet infamous satanic idols, such as Satan himself, Gengis Khan, Mussolini, Gaddafi, and more!
+               <br> <br>
+            We are only giving away 666 tickets, so hurry!
+            </p>
+        </div>
+
+            <form>
+                <div class="intro-text">Let's do this!</div>
+
+                <div class="form-wrapper">
+                    <label for="firstName">First Name
+                        <input type="text" id="firstName" name="firstName" pattern="^[^0-9]+$">
+                    </label>
+
+                    <label for="lastName">Last Name
+                        <input type="text" id="lastName" name="lastName" pattern="^[^0-9]+$">
+                    </label>
+
+                    <label for="email">EMAIL*
+                        <input type="email" id="email" name="email" required="">
+                    </label>
+
+                    <label for="phoneNumber">PHONE NUMBER
+                        <input type="number" id="phoneNumber" name="phoneNumber">
+                    </label>
+
+                    <label for="password">PASSWORD*
+                        <input class="error" type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" min="8" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" oninput="checkPassword()" required="">
+                    </label>
+
+                    <label for="cpassword">CONFIRM PASSWORD*
+                        <input class="error" type="password" id="cpassword" name="cpassword" title="Must match your password" oninput="checkPassword()" required="">
+                    </label>
+                    <div class="overlay"></div>
+                    <div class="errorMessage"></div>
+                </div>
+            </form>
+
+        <div class="footer">
+            <button type="submit">GRAB FREE DIECKET NOW!</button>
+            <div>Already have an account? Log in!</div>
+        </div>
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

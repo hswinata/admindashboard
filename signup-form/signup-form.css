@@ -1,0 +1,150 @@
+@font-face {
+    font-family: "Norse";
+    src: url('fonts/norse-bold-webfont.woff') format('woff'),
+        url('fonts/norse-bold-webfont.woff2') format('woff2');
+}
+
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    /* border: 1px red solid; */
+}
+
+body {
+    display: flex;
+}
+
+.hero-wrapper {
+    width: 100%;
+    max-width: 33vw;
+    min-width: 400px;
+    min-height: 100vh;
+
+    background-image: url(images/hell2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+    .hero-image {
+        position: relative;
+        top: 20%;
+        background: rgb(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+        .hero-image > h1 {
+            font-family: Norse, sans-serif;
+            font-size: 3rem;
+            padding: 40px;
+            color: white;
+        }
+
+.content-wrapper {
+    min-height: 100vh;
+    padding-top: 8rem;
+    background-color: #F9FAFB;
+    width: 100%;
+}
+
+    .header{
+        font-size: 1.3rem;
+        padding: 0px 100px 30px 40px;
+        font-family: Rockwell, Courier Bold, Courier, Georgia, Times, 'Times New Roman', serif;
+        width: 100%;
+    }
+
+    form {
+        background-color: #FEBF2A;
+        padding: 20px 0px 0px 40px;
+        box-shadow: 0px 5px 10px grey;
+    }
+
+    .intro-text {
+        font-family: 'Norse';
+        font-size: 2rem;
+        padding-bottom: 20px;
+    }
+
+    .overlay, .errorMessage {
+        color: #9B2701;
+        max-width: 85%;
+        padding-left: 10px;
+    }
+
+    .form-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    
+        font-family: 'Norse'
+    }
+
+        input {
+            display: block;
+            font-family: 'Norse';
+            height: 3rem;
+            width: 80%;
+            padding: 10px;
+            outline: none;
+            border: none;
+            font-size: 1.3rem;
+            border-radius: 10px;
+            margin-top: 5px;
+            box-shadow: 5px 5px 10px grey;
+        }
+
+        label {
+            padding-bottom: 25px;
+            font-size: 1.2rem;
+        }
+
+        .overlay {
+            grid-column: 1/2;
+            padding-right: 30px;
+        }
+
+        input:focus {
+            border: 3px solid #2a69fe;
+        }
+
+        input:focus:invalid {
+            border: 3px solid #9B2701;
+        }
+        
+    .footer {
+        padding: 30px 0 0 40px;
+    }
+
+        button {
+            font-size: 2rem;
+            background-color: #FEBF2A;
+            width: 50%;
+            min-width: 400px;
+            height: 60px;
+            color: black;
+            font-family: 'Norse';
+            border-radius: 8px;
+            letter-spacing: 2px;
+        }
+
+        button:hover {
+            cursor: grab;
+            background-color: #fe552a;
+        }
+
+        button:hover:before, button:hover:after {
+            content: '🔥';
+        }
+
+        .footer {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .footer>div {
+            padding-top: 20px;
+            font-family: Rockwell, Courier Bold, Courier, Georgia, Times, 'Times New Roman', serif;
+        }

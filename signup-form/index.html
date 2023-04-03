@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="signup-form.css">
+    <script src="sign-up-form.js" defer></script>
+<body>
+    <div class="hero-wrapper">
+        <div class="hero-image">
+            <h1>FREE One way ticket to hell and back!</h1>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="header">
+            <p>Sign up for a FREE one way ticket to hell and back! Enjoy the journey to meet infamous satanic idols, such as Satan himself, Gengis Khan, Mussolini, Gaddafi, and more!
+               <br> <br>
+            We are only giving away 666 tickets, so hurry!
+            </p>
+        </div>
+
+            <form>
+                <div class="intro-text">Let's do this!</div>
+
+                <div class="form-wrapper">
+                    <label for="firstName">First Name
+                        <input type="text" id="firstName" name="firstName" pattern="^[^0-9]+$">
+                    </label>
+
+                    <label for="lastName">Last Name
+                        <input type="text" id="lastName" name="lastName" pattern="^[^0-9]+$">
+                    </label>
+
+                    <label for="email">EMAIL*
+                        <input type="email" id="email" name="email" required>
+                    </label>
+
+                    <label for="phoneNumber">PHONE NUMBER
+                        <input type="number" id="phoneNumber" name="phoneNumber">
+                    </label>
+
+                    <label for="password">PASSWORD*
+                        <input class="error" type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" min="8" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" oninput="checkPassword()" required>
+                    </label>
+
+                    <label for="cpassword">CONFIRM PASSWORD*
+                        <input class="error" type="password" id="cpassword" name="cpassword" title="Must match your password" oninput="checkPassword()" required>
+                    </label>
+                    <div class="overlay"></div>
+                    <div class="errorMessage"></div>
+                </div>
+            </form>
+
+        <div class="footer">
+            <button type="submit">GRAB FREE DIECKET NOW!</button>
+            <div>Already have an account? Log in!</div>
+        </div>
+    </div>
+</body>
+</html>
