@@ -20,11 +20,13 @@ function toggleCard() {
                 e.target.classList.remove('eyeopen-icon');
                 e.target.classList.toggle('eyeslash-icon');
                 e.target.setAttribute('src', 'images/eye-slash.svg');
+                e.target.setAttribute('title', `I haven't read it!`);
                 myLibrary[indexNumber].toggleRead();
             } else if (e.target.classList.contains('eyeslash-icon')) {
                 e.target.classList.remove('eyeslash-icon');
                 e.target.classList.toggle('eyeopen-icon');
                 e.target.setAttribute('src', 'images/eye-open.svg');
+                e.target.setAttribute('title', `I've read it!`);
                 myLibrary[indexNumber].toggleRead();
             };
         })
@@ -99,13 +101,13 @@ function render() {
         actionIcons.append(eyeOpenIcon);
         eyeOpenIcon.setAttribute('src', 'images/eye-open.svg');
         eyeOpenIcon.classList.add('eyeopen-icon');
-        eyeOpenIcon.setAttribute('title', 'I have read this book');
+        eyeOpenIcon.setAttribute('title', `I've read it!`);
 
     } else if (card.hasRead == "0") {
         actionIcons.append(eyeSlashIcon);
         eyeSlashIcon.setAttribute('src', 'images/eye-slash.svg');
         eyeSlashIcon.classList.add('eyeslash-icon');
-        eyeSlashIcon.setAttribute('title', 'Have not read');
+        eyeSlashIcon.setAttribute('title', `I haven't read it!`);
         };
 
         actionIcons.append(trashIcon);
