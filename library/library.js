@@ -1,14 +1,16 @@
 let myLibrary = [];
 
-function Book(title, author, pages, hasRead) {
-    this.title = title,
-    this.author = author,
-    this.pages = pages,
-    this.hasRead = hasRead
-};
+class Book {
+    constructor(_title, _author, _pages, _hasRead) {
+        this.title = _title;
+        this.author = _author;
+        this.pages = _pages;
+        this.hasRead = _hasRead;
+    };
 
-Book.prototype.toggleRead = function() {
-    this.hasRead == 1 ? this.hasRead = 0 : this.hasRead = 1
+    set toggleRead(_hasRead) {
+        return this.hasRead == 1 ? this.hasRead = 0 : this.hasRead = 1;
+    };
 };
 
 function toggleCard() {
@@ -21,13 +23,13 @@ function toggleCard() {
                 e.target.classList.toggle('eyeslash-icon');
                 e.target.setAttribute('src', 'images/eye-slash.svg');
                 e.target.setAttribute('title', `I haven't read it!`);
-                myLibrary[indexNumber].toggleRead();
+                myLibrary[indexNumber].toggleRead = 0;
             } else if (e.target.classList.contains('eyeslash-icon')) {
                 e.target.classList.remove('eyeslash-icon');
                 e.target.classList.toggle('eyeopen-icon');
                 e.target.setAttribute('src', 'images/eye-open.svg');
                 e.target.setAttribute('title', `I've read it!`);
-                myLibrary[indexNumber].toggleRead();
+                myLibrary[indexNumber].toggleRead = 1;
             };
         })
     });
@@ -68,12 +70,12 @@ function closeModal() {
 };
 
 function addBookToLibrary() {
-    let title = document.getElementById('title').value;
-    let author = document.getElementById('author').value;
-    let pages = document.getElementById('pages').value;
-    let hasRead = document.getElementById('hasRead').value;
-    let newBook = new Book(title, author, pages, hasRead);
-    myLibrary.push(newBook);
+    let _title = document.getElementById('title').value;
+    let _author = document.getElementById('author').value;
+    let _pages = document.getElementById('pages').value;
+    let _hasRead = document.getElementById('hasRead').value;
+    let _newBook = new Book(_title, _author, _pages, _hasRead);
+    myLibrary.push(_newBook);
     render();
 };
 
