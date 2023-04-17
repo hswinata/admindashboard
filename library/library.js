@@ -9,7 +9,7 @@ class Book {
     };
 
     set toggleRead(_hasRead) {
-        return this.hasRead == 1 ? this.hasRead = 0 : this.hasRead = 1;
+        return this.hasRead = _hasRead;
     };
 };
 
