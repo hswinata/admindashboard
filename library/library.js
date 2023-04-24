@@ -37,7 +37,7 @@ function toggleCard() {
 
 function deleteCard() {
     let items = bookContainer.querySelectorAll('.card');
-    items.forEach(item => {
+    items.forEach(item => {g
         item.addEventListener('click', e => {
             if(e.target.classList.contains('trash-icon')) {
                 let cardIndex = item.getAttribute('data-index');

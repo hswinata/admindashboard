@@ -1,0 +1,138 @@
+html {
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 2rem 0px;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    justify-content: center;
+    margin: 2rem 0px;
+
+    cursor: crosshair;
+
+}
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 3rem;
+        border: 1px solid black;
+        width: 200px;
+        height: 200px;
+    }
+
+    div[id="X"] {
+        cursor: url('./img/X3.png'), auto;
+    }
+
+    div[id="O"] {
+        cursor: url('./img/O.png'), auto;
+    }
+
+    .box:hover {
+        background-color: lightgrey;
+    }
+
+    .box:hover:before {
+        content: "";
+        opacity: 0.5;
+    }
+
+.message {
+    text-align: center;
+    font-size: 1.5rem;
+    height: 1rem;
+    min-width: 300px;
+}
+
+.choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0px;
+}
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        gap: 10px;
+        justify-items: center;
+        align-items: center;
+
+        appearance: none;
+    }
+
+        label {
+            font-size: 1.5rem;
+        }
+
+        input {
+            appearance: none;
+            outline: none;
+            border: 1px black solid;
+            min-height: 40px;
+            padding: 10px;
+            min-width: 200px;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-right: auto;
+        }
+
+        .button-choice {
+            font-size: 0.8rem;
+            background-color: black;
+            color: white;
+            padding: 0.8rem;
+            cursor: pointer;
+
+            min-width: 100px;
+            min-height: 40px;
+        }
+
+        .button-choice:hover {
+            background-color: grey;
+        }
+    
+    .controller {
+        margin: 2rem 0px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+    }
+        .button-start, .button-rematch {
+            font-size: inherit;
+            background-color: black;
+            color: white;
+            padding: 0.8rem;
+            cursor: pointer;
+
+            min-width: 200px;
+        }
+
+        .button-start:hover, .button-rematch:hover {
+            background-color: grey;
+        }
+    
+    input:disabled, button:disabled {
+        background-color: grey;
+        color: lightgrey;
+        opacity: 0.6;
+    }
