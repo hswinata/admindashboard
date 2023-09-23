@@ -1,3 +1,5 @@
+https://hswinata.github.io/admindashboard/
+
 # admindashboard
 This project demonstrates my skills in HTML and CSS, particularly focusing on CSS Grid layout. As a beginner full-stack software engineer, I've created this project to practice and showcase my abilities in building modern web layouts. This project serves as a testament to my ability to:
 
@@ -35,4 +37,3 @@ This project demonstrates my skills in HTML and CSS, particularly focusing on CS
     - Utilized for version control and project management, enabling efficient collaboration and tracking of changes.
 5. FontAwesome:
     - Icons from FontAwesome were integrated to enhance the visual elements of the dashboard.
-
