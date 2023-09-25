@@ -1,11 +1,12 @@
-https://hswinata.github.io/admindashboard/
-
 # admindashboard
-This project demonstrates my skills in HTML and CSS, particularly focusing on CSS Grid layout. As a beginner full-stack software engineer, I've created this project to practice and showcase my abilities in building modern web layouts. This project serves as a testament to my ability to:
 
-1. Set up web page layouts using HTML and CSS.
-2. Apply CSS Grid for organized and visually appealing designs.
-3. Effectively use version control with Git and GitHub.
+[👆View Demo👆](https://hswinata.github.io/admindashboard/) 
+
+The Admin Dashboard project reflects my journey as a beginner full-stack software engineer during my early days in a bootcamp. With a focus on honing my skills in HTML and CSS, particularly emphasizing CSS Grid layout, I embarked on this project to practice and demonstrate my ability to create modern web layouts. This project is not just a showcase of technical abilities but also a testament to my progress in key areas:
+
+- Web Layouts: I've mastered the art of setting up web page layouts using HTML and CSS.
+- CSS Grid: I've effectively applied CSS Grid to craft organized and visually appealing designs.
+- Version Control: Demonstrating the use of version control with Git and GitHub for efficient project collaboration and tracking of changes.
 
 
 ## Features
